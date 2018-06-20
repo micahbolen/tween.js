@@ -1,4 +1,6 @@
-version: v1.5.0
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:uglify-js:20150824':
     - gulp-uglify > uglify-js:
@@ -14,6 +16,7 @@ ignore:
     - nodeunit > tap > runforcover > bunker > burrito > uglify-js:
         reason: None given
         expires: '2016-09-09T04:54:05.804Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp-jshint > minimatch:
@@ -32,3 +35,12 @@ patch:
         patched: '2016-08-10T04:54:05.865Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2016-08-10T04:54:05.865Z'
+  'npm:hoek:20180212':
+    - nodeunit > tap > coveralls > request > hawk > hoek:
+        patched: '2018-06-20T21:25:10.337Z'
+    - nodeunit > tap > coveralls > request > hawk > boom > hoek:
+        patched: '2018-06-20T21:25:10.337Z'
+    - nodeunit > tap > coveralls > request > hawk > sntp > hoek:
+        patched: '2018-06-20T21:25:10.337Z'
+    - nodeunit > tap > coveralls > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-20T21:25:10.337Z'
