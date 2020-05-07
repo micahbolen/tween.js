@@ -1,4 +1,6 @@
-version: v1.5.0
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:uglify-js:20150824':
     - gulp-uglify > uglify-js:
@@ -14,6 +16,7 @@ ignore:
     - nodeunit > tap > runforcover > bunker > burrito > uglify-js:
         reason: None given
         expires: '2016-09-09T04:54:05.804Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp-jshint > minimatch:
@@ -32,3 +35,24 @@ patch:
         patched: '2016-08-10T04:54:05.865Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2016-08-10T04:54:05.865Z'
+  SNYK-JS-LODASH-567746:
+    - gulp-jshint > jshint > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-types > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-generator > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-traverse > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-template > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-generator > babel-types > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-traverse > babel-types > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-template > babel-types > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-template > babel-traverse > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
+    - nodeunit > tap > nyc > istanbul-lib-instrument > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-07T00:00:11.875Z'
